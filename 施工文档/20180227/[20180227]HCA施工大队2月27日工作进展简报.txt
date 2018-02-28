@@ -1,0 +1,8 @@
+今天（2月27日）我们开始按照计划开始尝试分析流程，负责调研10xGenomics、smart-seq和scATAC-seq的同学进度如下：
+10xGenomics组安装好了工具，下载好了10xGenomics和dropSeq的测序reads、人和小鼠的reference index。从明天起开始继续分析；
+smart-seq组安装好了苗准师兄和李翔宇师姐给出的pipeline中的所有工具，下载了几个细胞的测序数据，目前仍在跑mapping，其余数据仍在下载；
+scATAC-seq组有现成工具，正在等mapping结果。
+
+目前进度未呈现滞后趋势；
+
+张老师您明天下午是否有空，我们想和您在功能框架层面交流一下做到什么粒度，方便为后面需求细化制定方案。
