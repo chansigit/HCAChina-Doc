@@ -10,6 +10,9 @@ This is a hub holding documents of HCA-China Project. Keep these files carefully
 - Song Shaoming
 - Yin Qijin
 - Wei Zheng
+- Hua Kui (Party A member, Meeting recorder)
+- Li Xiangyu (Party A member)
+- Miao Zhun (Party A member)
 
 ## Rules
 - Working time: 9:00-21:00 Mon. ~ Sat.
