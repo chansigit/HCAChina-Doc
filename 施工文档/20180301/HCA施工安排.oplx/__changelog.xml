@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="chensj16" date="2018-03-01T13:46:48.032Z" timestamp="2018-03-01T13:46:48.032Z">
+    <change idref="t1" attribute="title" type="string" from="任务 1" to="ATAC-seq" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="chensj16" date="2018-03-01T15:19:56.229Z" timestamp="2018-03-01T15:19:56.229Z">
+    <change idref="t8" to="t-1" to-position="1" resolved="yes">
+      <change idref="t8" attribute="effort" type="real" from="28800" to="31500"/>
+      <change idref="t8" attribute="internalAssignments" type="string" from="" to="7"/>
+      <change idref="t8" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-01T01:45:00.000Z"/>
+      <change idref="t8" attribute="title" type="string" to="10xGenomics流程尝试"/>
+    </change>
+    <change idref="t7" to="t-1" to-position="2" resolved="yes">
+      <change idref="t7" attribute="internalAssignments" type="string" from="" to="4"/>
+      <change idref="t7" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-01T01:30:00.000Z"/>
+      <change idref="t7" attribute="title" type="string" to="Smart-seq流程尝试"/>
+    </change>
+    <change idref="t9" to="t-1" to-position="3" resolved="yes">
+      <change idref="t9" attribute="effort" type="real" from="28800" to="86400"/>
+      <change idref="t9" attribute="internalAssignments" type="string" from="" to="1"/>
+      <change idref="t9" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-01T11:45:00.000Z"/>
+      <change idref="t9" attribute="title" type="string" to="Step基类设计"/>
+    </change>
+    <change idref="t10" to="t-1" to-position="4" resolved="yes">
+      <change idref="t10" attribute="effort" type="real" from="28800" to="10800"/>
+      <change idref="t10" attribute="internalAssignments" type="string" from="" to="10"/>
+      <change idref="t10" attribute="internalPrerequisitesString" type="string" to="1FS"/>
+      <change idref="t10" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-02T06:45:00.000Z"/>
+      <change idref="t10" attribute="title" type="string" to="整理scATAC-seq文档"/>
+    </change>
+    <change idref="t11" to="t-1" to-position="5" resolved="yes">
+      <change idref="t11" attribute="effort" type="real" from="28800" to="7200"/>
+      <change idref="t11" attribute="internalAssignments" type="string" from="" to="7"/>
+      <change idref="t11" attribute="internalPrerequisitesString" type="string" to="8FS"/>
+      <change idref="t11" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-02T03:15:00.000Z"/>
+      <change idref="t11" attribute="title" type="string" to="整理10xGenomics文档"/>
+    </change>
+    <change idref="t12" to="t-1" to-position="6" resolved="yes">
+      <change idref="t12" attribute="effort" type="real" from="28800" to="12600"/>
+      <change idref="t12" attribute="internalAssignments" type="string" from="" to="4"/>
+      <change idref="t12" attribute="internalPrerequisitesString" type="string" to="7FS"/>
+      <change idref="t12" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-02T02:15:00.000Z"/>
+      <change idref="t12" attribute="title" type="string" to="整理Smart-seq文档"/>
+    </change>
+    <change idref="t13" to="t-1" to-position="7" resolved="yes">
+      <change idref="t13" attribute="internalAssignments" type="string" from="" to="3"/>
+      <change idref="t13" attribute="internalPrerequisitesString" type="string" to="10FS, 11FS, 12FS"/>
+      <change idref="t13" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-03T01:30:00.000Z"/>
+      <change idref="t13" attribute="title" type="string" to="需求文档第一版"/>
+    </change>
+    <change idref="t14" to="t-1" to-position="8" resolved="yes">
+      <change idref="t14" attribute="effort" type="real" from="28800" to="14400"/>
+      <change idref="t14" attribute="internalPrerequisitesString" type="string" to="9FS, 13FS"/>
+      <change idref="t14" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-01T01:00:00.000Z"/>
+      <change idref="t14" attribute="title" type="string" to="甲方代表验收"/>
+    </change>
+    <change idref="t15" to="t-1" to-position="9" resolved="yes">
+      <change idref="t15" attribute="effort" type="real" from="28800" to="5400"/>
+      <change idref="t15" attribute="internalPrerequisitesString" type="string" to="14FS"/>
+      <change idref="t15" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-06T08:30:00.000Z"/>
+      <change idref="t15" attribute="title" type="string" to="召开下一阶段开发会议"/>
+    </change>
+    <change idref="t1" attribute="title" type="string" from="ATAC-seq" to="scATAC-seq流程尝试" resolved="yes"/>
+    <change idref="t1" attribute="effort" type="real" from="28800" to="35100" resolved="yes"/>
+    <change idref="t1" attribute="internalAssignments" type="string" from="" to="10" resolved="yes"/>
+    <change idref="t1" attribute="noEarlierThanConstraintDate" type="date" to="2018-03-01T01:30:00.000Z" resolved="yes"/>
+  </task-change-set>
+  <resource-change-set user="chensj16" date="2018-03-01T07:43:09.191Z" timestamp="2018-03-01T07:43:09.191Z">
+    <change idref="r-1" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;" resolved="yes"/>
+  </resource-change-set>
+  <resource-change-set user="chensj16" date="2018-03-01T13:46:48.031Z" timestamp="2018-03-01T13:46:48.031Z">
+    <change idref="r-1" attribute="standardHoursString" type="string" from=";32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;" to=";32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,56700,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400" resolved="yes"/>
+    <change idref="r10" to="r-1" to-position="1" resolved="yes">
+      <change idref="r10" attribute="name" type="string" from="" to="张威"/>
+      <change idref="r10" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400"/>
+    </change>
+    <change idref="r3" to="r-1" to-position="2" resolved="yes">
+      <change idref="r3" attribute="name" type="string" from="" to="陈斯杰"/>
+    </change>
+    <change idref="r4" to="r-1" to-position="3" resolved="yes">
+      <change idref="r4" attribute="name" type="string" from="" to="宋绍铭"/>
+      <change idref="r4" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400"/>
+    </change>
+    <change idref="r8" to="r-1" to-position="4" resolved="yes">
+      <change idref="r8" attribute="name" type="string" from="" to="陈盛泉"/>
+      <change idref="r8" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";70200,77400;32400,41400,50400,61200,70200,77400;50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;50400,61200,70200,77400;32400,41400,50400,61200,70200,77400"/>
+    </change>
+    <change idref="r9" to="r-1" to-position="5" resolved="yes">
+      <change idref="r9" attribute="name" type="string" from="" to="鄞启进"/>
+      <change idref="r9" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";70200,77400;32400,41400,50400,61200,70200,77400;50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;50400,61200,70200,77400;32400,41400,50400,61200,70200,77400"/>
+    </change>
+    <change idref="r7" to="r-1" to-position="6" resolved="yes">
+      <change idref="r7" attribute="name" type="string" from="" to="王震毅"/>
+      <change idref="r7" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,70200,77400;50400,61200,70200,77400;50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;50400,61200,70200,77400"/>
+    </change>
+    <change idref="r2" to="r-1" to-position="7" resolved="yes">
+      <change idref="r2" attribute="name" type="string" from="" to="刘昌毅"/>
+      <change idref="r2" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,50400,61200,70200,77400;32400,41400,50400,61200;32400,41400,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400"/>
+    </change>
+    <change idref="r11" to="r-1" to-position="8" resolved="yes">
+      <change idref="r11" attribute="name" type="string" from="" to="冯晨"/>
+      <change idref="r11" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,50400,61200;32400,41400,50400,61200,71100,77400;;32400,41400,50400,61200,71100,77400;32400,41400,50400,61200,71100,77400;32400,41400,50400,61200,71100,77400"/>
+    </change>
+    <change idref="r1" attribute="standardHoursString" type="string" from="-;-;-;-;-;-;-" to=";32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400;32400,41400,50400,61200,70200,77400" resolved="yes"/>
+    <change idref="r1" attribute="name" type="string" from="资源 1" to="魏征" resolved="yes"/>
+  </resource-change-set>
+  <resource-change-set user="chensj16" date="2018-03-01T15:19:56.229Z" timestamp="2018-03-01T15:19:56.229Z">
+    <change idref="r11" attribute="unitsAvailable" type="real" from="1" to="0" resolved="yes"/>
+  </resource-change-set>
+  <metadata-change-set user="chensj16" date="2018-03-01T07:43:09.191Z" timestamp="2018-03-01T07:43:09.191Z">
+    <change idref="m1" attribute="fixedDate" type="date" from="2007-01-01T20:00:00.000Z" to="2018-03-01T00:00:00.000Z" resolved="yes"/>
+  </metadata-change-set>
+  <metadata-change-set user="chensj16" date="2018-03-01T15:19:56.229Z" timestamp="2018-03-01T15:19:56.229Z">
+    <change idref="m1" attribute="fixedDate" type="date" from="2018-03-01T00:00:00.000Z" to="2018-03-01T01:00:00.000Z" resolved="yes"/>
+  </metadata-change-set>
+</changelog>
