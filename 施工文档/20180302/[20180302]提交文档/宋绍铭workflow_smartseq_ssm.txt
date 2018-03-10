@@ -1,0 +1,40 @@
+#smart-seq数据分析处理流程（前端） by 宋绍铭
+#step1 将下载的SRA文件转换为fastq格式
+fastq-dump --split-3 filename
+
+#step2 使用fastQC进行fastq的质量控制
+fastqc –o –f fastq filename
+
+#step3 bowtie2建立参考基因组的索引
+bowtie2-build genome.fa bowtie2index/genome>>bowtie2.log &
+
+#step4 使用tophat进行reads的mapping
+tophat -p 8 -G gencode.v27.chr_patch_hapl_scaff.basic.annotation.gtf -o SRR1274192_thout bowtie2index/genome SRR1274192_1.fastq SRR1274192_2.fastq
+
+#之后有两条分析方式：获取原始raw reads counts的route1 和 获取归一化处理后表达值的route2
+
+#route1 
+#将bam文件转换为sam文件（可选）
+samtools  view  -o  accepted_hits.sam  accepted_hits.bam
+
+#使用HTSeq计算基因表达量
+python -m HTSeq.scripts.count -s no    /home/songshaoming/data/HCA/SRR1274192_thout/accepted_hits.sam  gencode.v27.chr_patch_hapl_scaff.basic.annotation.gtf  > SRR1274192.count 
+
+#route2
+#使用cufflinks组装结果
+cufflinks -p 8   -G gencode.v27.chr_patch_hapl_scaff.basic.annotation.gtf  -o SRR1274192_clout   SRR1274192_thout/accepted_hits.bam
+
+#使用cuffmerge将所有实验的转录本合并
+cuffmerge -g /home/songshaoming/data/HCA/genome.gtf -s /home/songshaoming/data/HCA/bowtie2index/genome.fa -p 8 /home/songshaoming/data/HCA/assemblies.txt
+
+#使用cuffquant给基因和转录本的表达定量
+cuffquant -o SRR12952$num"_quant" -p 8 -u /home/songshaoming/data/HCA/genome.gtf /home/songshaoming/data/HCA/SRR12952$num"_thout/accepted_hits.bam"
+
+#使用cuffnorm进行基因和转录本表达水平的标准化处理
+cuffnorm -o cuffnorm_out -p 8 -L SRR1295210,SRR1295211... /home/songshaoming/data/HCA/genome.gtf /home/songshaoming/data/HCA/SRR1295210_quant/abundances.cxb,/home/songshaoming/data/HCA/SRR1295211_quant/abundances.cxb,...
+
+#使用cuffdiff分析差异表达基因
+cuffdiff -o diff_out -b bowtie2index/genome.fa -p 8 -L SRR1295210,SRR1295211... -u /home/songshaoming/data/HCA/merged_asm/merged.gtf /home/songshaoming/data/HCA/SRR1295210_thout/accepted_hits.bam，/home/songshaoming/data/HCA/SRR1295211_thout/accepted_hits.bam,...
+
+#后端处理代码参见http://hms-dbmi.github.io/scw/heterogeneity.html
+#基本包含了绝大多数基本的操作流程

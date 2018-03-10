@@ -1,0 +1,21 @@
+
+2018-3-9
+
+工作例会(早)
+
+    鄞启进介绍docker的使用
+    
+今日任务：
+    每个人打通各自负责的部分以后，转移到docker上
+
+冯晨、王震毅：中午前串起来
+宋绍铭、陈盛泉、鄞启进：节点串接，然后转移到docker
+张威：把做完的节点转接到docker上
+
+工作例会(晚)
+
+冯晨：cellrager和Seurat已经跑通，但在docker的容器中跑不了
+宋绍铭、陈盛泉、鄞启进：Smart-seq的pipeline(从fastq-dump到cufflinks), 在docker环境下已经跑通，下一步测试外部调用。下有分析的一些R脚本已经写好，还需要多样本测试。下一步包装cuffmerge,cuffquant,cuffdiff。
+张威: docker内命令行的路径有些问题没解决
+刘昌毅:drop-seq所有节点已经单独跑通
+王震毅：Seurat搞定，下一步和刘昌毅一起弄drop-seq的pipeline

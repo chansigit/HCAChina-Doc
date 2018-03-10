@@ -1,0 +1,19 @@
+# Smart-seq涉及的类的名称
+- SRAToFastq
+- FastQC
+- Tophat
+- Star
+- Cufflinks
+- HTSeq
+
+# 10x涉及的类的名称
+- Quantification10x
+- PCA
+
+# scATAC-seq涉及的类的名称
+- FastQC
+- AdapterRemoval
+- Mapping
+- SamToBam
+- BamToSam
+- DuplicateRemoval
