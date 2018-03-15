@@ -32,7 +32,7 @@ Total map reads means that total number of reads mapped to genome
 ---
 title: "test"
 author: "wz"
-date: "2018年3月14日"
+date: "2018.3.14"
 output: html_document
 ---
 
