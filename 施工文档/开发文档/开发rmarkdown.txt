@@ -10,6 +10,15 @@ def getMarkdownEN(self,):
 	```
 	Total map reads means that total number of reads mapped to genome
 	
+	```{python}
+	import numpy as np
+	import matplotlib.pyplot as plt
+
+	plt.plot([1,2,3,4])
+	plt.show()
+	```
+
+	
 	""".format(mapRs = self.getOutput('mapRsOutput'))
 	
 
@@ -25,9 +34,14 @@ readLines(con)
 ```
 Total map reads means that total number of reads mapped to genome
 
-```{python echo=FALSE}
-print('if you use python is also ok')
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.plot([1,2,3,4])
+plt.show()
 ```
+
 
 可以用python来打印一些文本，matplotlib画图也没问题，不过如果能用R还是尽量用R
 
