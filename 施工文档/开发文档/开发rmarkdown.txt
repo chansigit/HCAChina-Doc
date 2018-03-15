@@ -19,12 +19,17 @@ def getMarkdownEN(self,):
 >>>session.run()
 >>>bt2.getMarkdownEN()
 The mapping rate is shown below:
-```{r}
+```{r echo=FALSE}
 con <- file("/home/weizheng/zuoye/step_00_Bowtie2/mapRsOutput.txt", "r", blocking = FALSE)
 readLines(con)
 ```
 Total map reads means that total number of reads mapped to genome
 
+```{python echo=FALSE}
+print('if you use python is also ok')
+```
+
+可以用python来打印一些文本，但是图表估计就不太好用了,最好用R
 
 将上述内容拷到rmarkdown文件里面
 以下为XXX.Rmd文件内容
