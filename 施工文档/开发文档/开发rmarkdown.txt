@@ -29,7 +29,7 @@ Total map reads means that total number of reads mapped to genome
 print('if you use python is also ok')
 ```
 
-可以用python来打印一些文本，但是图表估计就不太好用了,最好用R
+可以用python来打印一些文本，matplotlib画图也没问题，不过如果能用R还是尽量用R
 
 将上述内容拷到rmarkdown文件里面
 以下为XXX.Rmd文件内容
@@ -42,6 +42,7 @@ output: html_document
 ---
 
 
+
 The mapping rate is shown below:
 ```{r}
 con <- file("/home/weizheng/zuoye/step_00_Bowtie2/mapRsOutput.txt", "r", blocking = FALSE)
@@ -49,7 +50,10 @@ readLines(con)
 ```
 Total map reads means that total number of reads mapped to genome
 
-进入R
+如果使用python来写rmarkdown则
+带交互缓冲的方式进入R:
+xvfb-run R
+如果使用R来写rmarkdown就无所谓了，直接进入R就可以了
 
 >library(rmarkdown)
 >render('XXX.Rmd')
