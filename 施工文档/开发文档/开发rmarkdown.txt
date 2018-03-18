@@ -54,7 +54,9 @@ plt.show()
 title: "test"
 author: "wz"
 date: "2018.3.14"
-output: html_document
+output: 
+    html_document:
+        df_print: paged
 ---
 
 
