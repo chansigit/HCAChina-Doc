@@ -1,14 +1,23 @@
-实现getMarkdownEN()
+实现getMarkdownEN(),注意内部原本的花括号要改成双层花括号，否则就会被解析成输入的参数了
 
 def getMarkdownEN(self,):
 	mdtext = """
 	### Bowtie2 Mapping Result
 	The mapping rate is shown below:
-	```{r}
+	```{{r}}
 	con <- file("{mapRs}", "r", blocking = FALSE)
 	readLines(con)
 	```
 	Total map reads means that total number of reads mapped to genome
+	
+	```{{python}}
+	import numpy as np
+	import matplotlib.pyplot as plt
+
+	plt.plot([1,2,3,4])
+	plt.show()
+	```
+
 	
 	""".format(mapRs = self.getOutput('mapRsOutput'))
 	
@@ -19,22 +28,37 @@ def getMarkdownEN(self,):
 >>>session.run()
 >>>bt2.getMarkdownEN()
 The mapping rate is shown below:
-```{r}
+```{r echo=FALSE}
 con <- file("/home/weizheng/zuoye/step_00_Bowtie2/mapRsOutput.txt", "r", blocking = FALSE)
 readLines(con)
 ```
 Total map reads means that total number of reads mapped to genome
 
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
 
-将上述内容拷到rmarkdown文件里面
+plt.plot([1,2,3,4])
+plt.show()
+```
+
+
+可以用python来打印一些文本，matplotlib画图也没问题，不过如果能用R还是尽量用R
+
+将上述内容拷到rmarkdown文件里面，可以在docker里
+也可以把文件考到windows里，在rstudio里运行
+记得修改markdown中的路径到指定的文件，并把文件考到windows里
 以下为XXX.Rmd文件内容
 
 ---
 title: "test"
 author: "wz"
 date: "2018.3.14"
-output: html_document
+output: 
+    html_document:
+        df_print: paged
 ---
+
 
 
 The mapping rate is shown below:
@@ -44,7 +68,10 @@ readLines(con)
 ```
 Total map reads means that total number of reads mapped to genome
 
-进入R
+如果使用python来写rmarkdown则
+带交互缓冲的方式进入R:
+xvfb-run R
+如果使用R来写rmarkdown就无所谓了，直接进入R就可以了
 
 >library(rmarkdown)
 >render('XXX.Rmd')
